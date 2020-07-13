@@ -65,6 +65,8 @@ The data prepartion tasks involved in this table include:
 
 ![ohe](https://user-images.githubusercontent.com/67794705/87349163-c5359c00-c54d-11ea-915c-7bf00d6d460a.PNG)
 
+* Splitting the datasets into train and test sets:The Test dataset provides the gold standard used to evaluate the model. It is only used once a model is completely trained(using the train and validation sets). The test set is generally what is used to evaluate competing models.
+
 * Feature Scaling(standardization): Since the range of values of the raw data vary widely ,the objective function in classifier will not work properly without some sort of scaling.Here ,I use the standardization or z-normaliztion to scale the features.
 
 ![standardization](https://user-images.githubusercontent.com/67794705/87352694-67a44e00-c553-11ea-9d3a-e8fcd0b98bd8.PNG)
