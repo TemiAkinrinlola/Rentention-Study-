@@ -77,7 +77,7 @@ The data prepartion tasks involved in this table include:
 
 ![LR](https://user-images.githubusercontent.com/67794705/87353069-05981880-c554-11ea-90e4-e4f138813629.PNG)
 
-* Prediction model: The prediction model of choice is the Random Forest Classifier.Random forests classifiers are an ensemble learning method for classification  that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set.
+* Prediction model: The prediction model of choice is the Random Forest Classifier.Random forests classifiers are an ensemble learning method for classification  that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set.Random Forest classifier also provides a pretty good indicator of the feature importance.
 
 Some of the RF hyperparameters include:
 
@@ -88,7 +88,7 @@ min_samples_split = min number of data points placed in a node before the node i
 min_samples_leaf = min number of data points allowed in a leaf node
 bootstrap = method for sampling data points (with or without replacement)
 
-Given the imbalance of the available dataset,RF classifier makes for a great choice.The model's hyperparameters were tuned with GridSearchCV to find the best possible model parameters.
+Given the kind of the available dataset,RF classifier makes for a great choice.The model's hyperparameters were tuned with GridSearchCV to find the best possible model parameters.
 
 ### MODEL EVALUATION 
 The model is evaluated on some unseen test data to assess the likely future performance of the model.If the model fits to the training data much better than it does the test data ,overfitting is a likely cause. The most frequent classification evaluation metric that is used is  ‘Accuracy’. You might believe that the model is good when the accuracy rate is 99%! However, it is not always true and can be misleading in some situations epecially in instances of imbalanced classification.F1-score is a better metric when there are imbalanced classes as in the this case.The F score is defined as the weighted harmonic mean of the test’s precision and recall.
