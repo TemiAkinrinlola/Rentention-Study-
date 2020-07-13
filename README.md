@@ -65,4 +65,40 @@ The data prepartion tasks involved in this table include:
 
 ![ohe](https://user-images.githubusercontent.com/67794705/87349163-c5359c00-c54d-11ea-915c-7bf00d6d460a.PNG)
 
-* Feature Scaling(standardization): Since the range of values of the raw data vary widely ,the objective function in classifier will not work properly without some sort of scaling or normalization.
+* Feature Scaling(standardization): Since the range of values of the raw data vary widely ,the objective function in classifier will not work properly without some sort of scaling.Here ,I use the standardization or z-normaliztion to scale the features.
+
+![standardization](https://user-images.githubusercontent.com/67794705/87352694-67a44e00-c553-11ea-9d3a-e8fcd0b98bd8.PNG)
+
+### MODEL BUILDING
+
+* Basline model: A baseline is the result of a very basic model/solution. You generally create a baseline and then try to make more complex solutions in order to get a better result. If you achieve a better score than the baseline, it is good.Here ,I used a logistic regression classifier model with default hyperparameters as our baseline.
+
+![LR](https://user-images.githubusercontent.com/67794705/87353069-05981880-c554-11ea-90e4-e4f138813629.PNG)
+
+* Prediction model: The prediction model of choice is the Random Forest Classifier.Random forests classifiers are an ensemble learning method for classification  that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set.
+
+Some of the RF hyperparameters include:
+
+n_estimators = number of trees in the foreset
+max_features = max number of features considered for splitting a node
+max_depth = max number of levels in each decision tree
+min_samples_split = min number of data points placed in a node before the node is split
+min_samples_leaf = min number of data points allowed in a leaf node
+bootstrap = method for sampling data points (with or without replacement)
+
+Given the imbalance of the available dataset,RF classifier makes for a great choice.The model's hyperparameters were tuned with GridSearchCV to find the best possible model parameters.
+
+### MODEL EVALUATION 
+The model is evaluated on some unseen test data to assess the likely future performance of the model.If the model fits to the training data much better than it does the test data ,overfitting is a likely cause. The most frequent classification evaluation metric that is used is  ‘Accuracy’. You might believe that the model is good when the accuracy rate is 99%! However, it is not always true and can be misleading in some situations epecially in instances of imbalanced classification.F1-score is a better metric when there are imbalanced classes as in the this case.The F score is defined as the weighted harmonic mean of the test’s precision and recall.
+
+The F1-score is used to measure a test’s accuracy, and it balances the use of precision and recall to do it. The F score can provide a more realistic measure of a test’s performance by using both precision and recall.
+
+![PERFORMANCE EVALUATION](https://user-images.githubusercontent.com/67794705/87356123-6fff8780-c559-11ea-9e48-326469813ee1.PNG)
+
+The Random Forest Classifier performed excellently on this classification with a F1-score of 97.06.
+
+### CONCLUSION 
+
+
+
+
