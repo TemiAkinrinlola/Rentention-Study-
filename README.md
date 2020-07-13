@@ -93,7 +93,7 @@ The model is evaluated on some unseen test data to assess the likely future perf
 
 The F1-score is used to measure a test’s accuracy, and it balances the use of precision and recall to do it. The F score can provide a more realistic measure of a test’s performance by using both precision and recall.
 
-![PERFORMANCE EVALUATION](https://user-images.githubusercontent.com/67794705/87356123-6fff8780-c559-11ea-9e48-326469813ee1.PNG)
+![PERFORMANCE](https://user-images.githubusercontent.com/67794705/87356505-16e42380-c55a-11ea-8503-a4e6e08af8fe.PNG)
 
 The Random Forest Classifier performed excellently on this classification with a F1-score of 97.06.
 
