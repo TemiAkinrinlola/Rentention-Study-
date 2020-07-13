@@ -57,4 +57,12 @@ Exploratory analysis of the available dataset revealed some information about th
 Machine learning models are powerful but they impose certain requirements on the data.They often require data to be in a form that is different from how they are provided naturally,and some conversions will be necessary .Therefore,a data preparation phase often proceeds along with data understanding,in which data are manipulated and converted into forms that yield better results.
 The data prepartion tasks involved in this table include:
 
-* Dealing with missing values:
+* Dealing with missing values:Data can have missing values for several reasons such as observations that were not recorded and data corruption. Handling missing data is important as many machine learning algorithms do not support data with missing values.To address this problem,we fill the missing values with the mean values of the attributes.
+
+![fillingup](https://user-images.githubusercontent.com/67794705/87347978-eeedc380-c54b-11ea-977b-226a54c9231d.PNG)
+
+* Categorical Encoding: Most of the Machine learning algorithms can not handle categorical variables unless we convert them to numerical values. Many algorithm’s performances vary based on how Categorical variables are encoded.There are two common ways to perform categorical encoding ;label encoding and one hot encoding.Label encoding works best for ordinal categorical features while the one hot encoder works for non-ordinal categorical data.Given the type of available dataset,I employ the one hot encoding.
+
+![ohe](https://user-images.githubusercontent.com/67794705/87349163-c5359c00-c54d-11ea-915c-7bf00d6d460a.PNG)
+
+* Feature Scaling(standardization): Since the range of values of the raw data vary widely ,the objective function in classifier will not work properly without some sort of scaling or normalization.
