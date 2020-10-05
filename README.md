@@ -48,7 +48,7 @@ Exploratory analysis of the available dataset revealed some information about th
 
 ![satisfactionbydepartment](https://user-images.githubusercontent.com/67794705/87345286-c6fc6100-c547-11ea-9db6-0b70aee919ca.png)
 
-*The correlation matrix indicates that 
+
 
 ![correlationmatrix](https://user-images.githubusercontent.com/67794705/87345275-c5329d80-c547-11ea-9f52-103ff5915c35.png)
 
@@ -99,7 +99,7 @@ The F1-score is used to measure a test’s accuracy, and it balances the use of 
 
 The Random Forest Classifier performed excellently on this classification with a F1-score of 97.06.
 
-### CONCLUSION 
+
 
 
 
